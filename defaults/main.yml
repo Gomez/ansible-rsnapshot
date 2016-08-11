@@ -27,6 +27,9 @@ rsnapshot_servers: '{{ groups.debops_service_rsnapshot_rsync|d([]) +
                        groups.debops_rsnapshot_rsync|d([]) }}'
 
 
+# .. envvar:: rsnapshot_fqdn
+rsnapshot_fqdn: '{{ ansible_fqdn }}'
+
 # .. envvar:: rsnapshot_external_servers
 #
 # List of dicts which define external servers to backup on a particular

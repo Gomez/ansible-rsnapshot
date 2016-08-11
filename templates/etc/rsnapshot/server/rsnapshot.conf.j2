@@ -7,7 +7,7 @@
 {% if host.rsnapshot_backup_host is defined and host.rsnapshot_backup_host %}
 {% set rsnapshot_tpl_host = host.rsnapshot_backup_host %}
 {% else %}
-{% set rsnapshot_tpl_host = host.ansible_fqdn %}
+{% set rsnapshot_tpl_host = rsnapshot_fqdn %}
 {% endif %}
 {% if host.rsnapshot_backup_path is defined and host.rsnapshot_backup_path %}
 {% set rsnapshot_tpl_path = host.rsnapshot_backup_path %}

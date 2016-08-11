@@ -1,5 +1,9 @@
 ---
 
+- name: Expose host FQDN in temporary variables
+  set_fact:
+    rsnapshot_fact_fqdn: '{{ rsnapshot_fqdn }}'
+
 - name: Install required packages on client
   apt:
     name: 'rsnapshot'
